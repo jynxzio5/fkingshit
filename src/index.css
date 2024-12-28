@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .dark .recharts-cartesian-grid-horizontal line,
+  .dark .recharts-cartesian-grid-vertical line {
+    stroke: currentColor;
+    opacity: 0.2;
+  }
+  
+  .dark .recharts-tooltip-wrapper {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  @apply bg-gray-50 dark:bg-gray-900;
+}
+
+.recharts-tooltip-wrapper {
+  transition: background-color 0.2s ease;
+}
